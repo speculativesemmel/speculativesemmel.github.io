@@ -56,3 +56,7 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+a.temp:link {color: #f8e502;}
+a.temp:visited {color: #e1a4c0;}
+a.temp:hover {background: #66ff7f; color: #155002}

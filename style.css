@@ -2,13 +2,12 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial;
-    padding: 10px;
-    background: #f1f1f1;
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: #ffca18;
-    background-color: rgb(126, 123, 123);
+    background-color: rgb(5, 42, 54);
+    height: 100%;
 }
 
 .container {
@@ -60,3 +59,41 @@ body {
 a.temp:link {color: #f8e502;}
 a.temp:visited {color: #e1a4c0;}
 a.temp:hover {background: #66ff7f; color: #155002}
+
+/* Tabs */
+
+.tablink {
+    background-color: #385d60;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #5b868c;
+}
+
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+#projects {
+    background-color: #48757a;
+}
+#otherWork {
+    background-color: #48757a;
+}
+#contact {
+    background-color: #48757a;
+}
+#about {
+    background-color: #48757a;
+}

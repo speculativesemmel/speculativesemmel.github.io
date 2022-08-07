@@ -8,10 +8,9 @@ body {
 }
 
 .moving-background {
-    animation:slide 3s ease-in-out infinite alternate;
-    /*background-image: linear-gradient(-145deg, #a2a0a0 50%, #b9b9b9 50%);*/
-    background-image: linear-gradient(-145deg, #ebf8e1 50%, #f69d3c 50%);
-    /*background-image: linear-gradient(90deg, #3f87a6, #ebf8e1, #f69d3c);*/
+    animation:slide 7s ease-in-out infinite alternate;
+    /*background-image: linear-gradient(-145deg, #ebf8e1 50%, #f69d3c 50%);*/
+    background-image: linear-gradient(-145deg, #ebf8e1 50%, #06a694 50%);
     bottom:0;
     left:-50%;
     opacity:.5;
@@ -23,25 +22,75 @@ body {
 
 .moving-background-vers2 {
     animation-direction:alternate-reverse;
-    animation-duration:4s;
+    animation-duration:6s;
 }
 
 .moving-background-vers3 {
     animation-duration:5s;
 }
 
-.content {
+.welcome-box {
+    max-width: 700px;
     background-color:rgba(255,255,255,.75);
     border-radius:.55em;
     box-shadow:5px 5px .55em rgba(0,0,0,.31);
     box-sizing:border-box;
     left:50%;
-    padding:10vmin;
+    padding: 10px 30px;
     position:fixed;
     text-align:center;
     top:50%;
     transform:translate(-50%, -50%);
 }
+
+.enter-button {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+    border-radius:.55em;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 12px 2px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    animation: pulse 2s linear infinite;
+}
+
+.enter-button:hover {
+    background-color: #008CBA;
+    color: white;
+    animation: none;
+    transition: 0.7s
+}
+
+.semmel-container {
+   padding-top: 80%;
+}
+
+.semmel {
+    width: 40%;
+    transform-origin:120% center;
+    position:relative;
+    animation:circular 8s linear infinite;
+    z-index: -1;
+}
+
+@media screen and (min-width: 601px) {
+    .semmel-container {
+        padding-top: 20%;
+        padding-left: 25%;
+    }
+    .semmel {
+        width: 30%;
+        transform-origin:110% center;
+    }
+}
+
+/* Rules */
 
 @keyframes slide {
     0% {
@@ -52,24 +101,20 @@ body {
     }
 }
 
-.enter-button {
-    background-color: white;
-    color: black;
-    border: 2px solid #008CBA;
-    border-radius:.55em;
-    padding: 14px 26px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 4px 2px;
-    transition-duration: 0.5s;
-    cursor: pointer;
+@keyframes circular {
+    100% {
+        transform:rotate(360deg);
+    }
 }
 
-.enter-button:hover {
-    background-color: #008CBA;
-    color: white;
-    content: '\00bb';
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgb(167, 240, 250);
+    }
+    50% {
+        box-shadow: 0 0 8px 7px rgb(166, 238, 249, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
 }

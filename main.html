@@ -5,33 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="speculativesemmel is the pseudonym of speculative design student selma muehlbauer.">
     <link rel="stylesheet" href="main-style.css">
-    <script src="jsscript.js"></script>
+    <script src="jsscript.js" defer></script>
     <title>Semmel</title>
 </head>
 <body>
 
-<button class="tablink" onclick="openPage('projects', this, '#48757a')" >Projects</button>
-<button class="tablink" onclick="openPage('otherWork', this, '#48757a')">Other Work</button>
-<button class="tablink" onclick="openPage('contact', this, '#48757a')">Contact</button>
-<button class="tablink" onclick="openPage('about', this, '#48757a')">About Me</button>
+<nav>
+    <div class="logo">
+        Logo
+    </div>
+    <div class="links">
+        <p onclick="openPage('projects', this)" class="tab"> Projects</p>
+        <p onclick="openPage('otherWork', this)" class="tab">Other Work</p>
+        <p onclick="openPage('contact', this)" class="tab">Contact</p>
+        <p onclick="openPage('about', this)" class="tab">About Me</p>
+        <strong id="mobile-menu-btn">Menu</strong>
+    </div>
+</nav>
 
-<div id="projects" class="tabcontent">
+<div class="mobile-menu">
+    <p onclick="openPage('projects', this)" class="tab">Projects</p>
+    <p onclick="openPage('otherWork', this)" class="tab">Other Work</p>
+    <p onclick="openPage('contact', this)" class="tab">Contact</p>
+    <p onclick="openPage('about', this)" class="tab">About Me</p>
+</div>
+
+</body>
+</html>
+
+<div id="projects">
     <p><span style="font-size: 22px; letter-spacing: 2px;">Currently, this site is under speculative construction.</span></p>
-
     <p><span style="font-size: 22px; letter-spacing: 2px;">
     Please come back later or click here: I mean <a class="temp" href="p5js/p5js.html">here</a>.</span>
     </p>
 </div>
 
-<div id="otherWork" class="tabcontent">
+<div id="otherWork">
     <h3>Other Work</h3>
 </div>
 
-<div id="contact" class="tabcontent">
+<div id="contact">
     <h3>Contact</h3>
 </div>
 
-<div id="about" class="tabcontent">
+<div id="about">
 
     <p><span style="font-size: 22px; letter-spacing: 2px;">I'm a speculative construction worker in some industry in every future.</span></p>
 
@@ -46,5 +63,3 @@
 
 </div>
 
-</body>
-</html>

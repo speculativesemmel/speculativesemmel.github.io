@@ -1,28 +1,27 @@
-var mobileMenuBtn = document.querySelector("#mobile-menu-btn");
+function openPage(pageName) {
+    var i, tabcontent;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    document.getElementById(pageName).style.display = "block";
+}
+
+var mobileMenuButton = document.querySelector("#mobile-menu-button");
 var mobileMenu = document.querySelector(".mobile-menu");
 
-mobileMenuBtn.addEventListener("click", () => {
+mobileMenuButton.addEventListener("click", () => {
         if (mobileMenu.style.display === "none") {
             mobileMenu.style.display = "flex";
-            mobileMenuBtn.innerHTML = "Close";
+            mobileMenuButton.innerHTML = "Close";
         }
         else {
             mobileMenu.style.display = "none";
-            mobileMenuBtn.innerHTML = "Menu";
+            mobileMenuButton.innerHTML = "Menu";
         }
     }
 );
 
-
-function openPage(pageName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-    }
-    document.getElementById(pageName).style.display = "block";
-}
+// To-Do: Navbar collapse after click for mobile mode
+// Does this even work
+// <a>'s needed?

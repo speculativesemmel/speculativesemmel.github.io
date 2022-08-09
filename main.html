@@ -13,7 +13,9 @@
 <div class="header">
     <nav>
         <div class="logo">
-            <img src="media/logo.png" alt="Literally me" id="rounded-logo">
+            <a href="index-two.html">
+                <img src="media/logo.png" alt="Literally me" id="rounded-logo">
+            </a>
         </div>
         <div class="links">
             <p onclick="openPage('projects', this)" class="tab"> Projects</p>
@@ -32,39 +34,29 @@
     </div>
 </div>
 
-<script>
-    function toggli() {
-        var x = document.getElementById("waldeinsamkeit");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-        } else {
-            x.style.display = "none";
-        }
-    }
-</script>
-
 <div class="main-container">
     <div id="projects" class="tab-content">
-        <p class="open-project">
-            <a href="#" onclick="toggli()">Waldeinsamkeit 2.0</a>
-            <div id="waldeinsamkeit" style="display: none">
+        <div class="open-project">
+            <a id="project-content">Waldeinsamkeit 2.0</a>
+            <div id="waldeinsamkeit" class="initially-close-bob">
                 'Waldeinsamkeit' is a German term describing the feeling of connectedness with a forest and the comfort and spiritual
                 fulfilment of being alone in the forest.
                 <br>.<br>
                 Looking at the current statistics of soil sealing in Austria the project asks the question what would happen if we kept
                 these numbers up. How would people in an endless city try to emulate the experience of Waldeinsamkeit? Furthermore,
-                it explores the change of the human’s relationship to nature within this scenario.
+                it explores the change of the human's relationship to nature within this scenario.
                 <br>.<br>
                 The tools, a vest to curate and archive the smells of nature, and the grounding shoes, shoes with earth filled soles,
-                are this project’s interpretation on how the future is trying to reconnect to a nature and a past they can only speculate about.
+                are this project's interpretation on how the future is trying to reconnect to a nature and a past they can only speculate about.
                 <br>.<br>
                 This project intends to be a starting point for asking questions not only about the future but the present and
                 how the consequences of our actions are the fundament of said future.
             </div>
-        </p>
+        </div>
         <p class="open-project">
-            <a href="#">Deep Dive</a>
+            <a id="project-content-2">Deep Dive</a>
         </p>
+        <!-- TO-DO: properly define ids/classes for clickEvents -->
         <!--
         <p><span style="font-size: 22px; letter-spacing: 2px;">Currently, this site is under speculative construction.</span></p>
         <p><span style="font-size: 22px; letter-spacing: 2px;">

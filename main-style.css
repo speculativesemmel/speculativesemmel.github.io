@@ -125,6 +125,68 @@ nav .links {
     display: none;
 }
 
+
 #waldeinsamkeit {
     width: 100%;
+    text-align: left;
+}
+
+
+#project-content {
+    cursor: pointer;
+}
+
+#project-content:hover {
+    color: blue;
+    font-size: 150%;
+}
+
+#project-content-2 {
+    cursor: pointer;
+}
+#project-content-2:hover {
+    color: blue;
+    font-size: 150%;
+}
+
+.initially-close-bob {
+    display: none;
+}
+
+.close-bob {
+    animation: fade-out 1s ;
+    -webkit-animation: fade-out 1s ; /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.open-bob{
+    animation: fade-in 2s ;
+    -webkit-animation: fade-in 2s ;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+    from {
+        max-height: 1000px;
+        opacity: 1;
+    }
+    to {
+        display:none;
+        max-height: 0;
+        opacity:0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        display:none;
+        max-height: 0;
+        opacity:0;
+    }
+    to {
+        max-height: 1000px;
+        opacity: 1;
+    }
 }

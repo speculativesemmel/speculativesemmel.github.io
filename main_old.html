@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Semmel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="speculativesemmel is the pseudonym of speculative design student selma muehlbauer.">
+    <link rel="stylesheet" href="main-style.css">
+    <script src="jsscript.js" defer></script>
+    <title>Semmel</title>
+</head>
+<body>
+
+<div class="header">
+    <nav>
+        <div class="logo">
+            <a href="index-two.html">
+                <img src="media/logo.png" alt="Literally me" id="rounded-logo">
+            </a>
+        </div>
+        <div class="links">
+            <p onclick="openPage('projects', this)" class="tab"> Projects</p>
+            <p onclick="openPage('otherWork', this)" class="tab">Other Work</p>
+            <p onclick="openPage('contact', this)" class="tab">Contact</p>
+            <p onclick="openPage('about', this)" class="tab">About Me</p>
+            <p id="mobile-menu-button">Menu</p>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <p onclick="openPage('projects', this)" class="tab">Projects</p>
+        <p onclick="openPage('otherWork', this)" class="tab">Other Work</p>
+        <p onclick="openPage('contact', this)" class="tab">Contact</p>
+        <p onclick="openPage('about', this)" class="tab">About Me</p>
+    </div>
+</div>
+
+<div class="main-container">
+    <div id="projects" class="tab-content">
+        <div class="open-project">
+            <a id="project-content">Waldeinsamkeit 2.0</a>
+            <div id="waldeinsamkeit" class="initially-close-bob">
+                'Waldeinsamkeit' is a German term describing the feeling of connectedness with a forest and the comfort and spiritual
+                fulfilment of being alone in the forest.
+                <br>.<br>
+                Looking at the current statistics of soil sealing in Austria the project asks the question what would happen if we kept
+                these numbers up. How would people in an endless city try to emulate the experience of Waldeinsamkeit? Furthermore,
+                it explores the change of the human's relationship to nature within this scenario.
+                <br>.<br>
+                The tools, a vest to curate and archive the smells of nature, and the grounding shoes, shoes with earth filled soles,
+                are this project's interpretation on how the future is trying to reconnect to a nature and a past they can only speculate about.
+                <br>.<br>
+                This project intends to be a starting point for asking questions not only about the future but the present and
+                how the consequences of our actions are the fundament of said future.
+            </div>
+        </div>
+        <p class="open-project">
+            <a id="project-content-2">Deep Dive</a>
+        </p>
+        <!-- TO-DO: properly define ids/classes for clickEvents -->
+        <!--
+        <p><span style="font-size: 22px; letter-spacing: 2px;">Currently, this site is under speculative construction.</span></p>
+        <p><span style="font-size: 22px; letter-spacing: 2px;">
+        Please come back later or click here: I mean <a class="temp" href="p5js/p5js.html">here</a>.</span>
+        </p>
+        -->
+    </div>
+
+    <div id="otherWork" class="tab-content">
+        <h3>Other Work</h3>
+    </div>
+
+    <div id="contact" class="tab-content">
+        <h3>Contact</h3>
+    </div>
+
+    <div id="about" class="tab-content">
+        <p><span style="font-size: 22px; letter-spacing: 2px;">I'm a speculative construction worker in some industry in every future.</span></p>
+
+        <div class="temp-container">
+            <div class="container">
+                <img src="media/selma.jpg" alt="This is me, and I like trees." class="image">
+                <div class="overlay">
+                    <div class="text">This is me, Selma.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

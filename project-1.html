@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="main-style.css">
+    <title>Semmel | Speculative Design</title>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <div class="container flex">
+        <p></p>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-- Head -->
+<<section class="headline" style="margin-bottom: 60px;">
+    <div class="container grid" style="border-bottom: 2px solid black;">
+
+        <div class="headline-text">
+            <h1 style="font-weight: bold;">But The Shadow Remains </h1>
+            <p>A project responding to our semester brief ‘Jelly Worlds’, where we, Design Investigations, partnered with Vienna’s Natural
+                History Museum to imagine and speculate deep time and alternate evolutionary histories. The brief emerged from NHM’s desire
+                to explore stories around the recently discovered Gabon fossils that suggest multicellular life existed 2 billion years ago.
+            </p>
+            <a href="projects.html" class="btn btn-possible">Boring AF. Take me back</a>
+        </div>
+
+        <img src="media/shadow0.jpeg" alt="semmel">
+    </div>
+</section>
+
+<button onclick="toTheMoon()" id="scrollBackUp" title="Beam Me Up">Beam Me Up</button>
+
+<section>
+    <div class="projects">
+        <div class="project-description">
+            Although humankind represents only 0.0067 % of earth’s lifetime, we see ourselves as the ultimate species. We interpret fossils we find as evidence
+            that other life forms existed on this planet before us and as source for our assumptions on their look — just like we did with the Gabonionta.
+            <br>
+            <br>
+            However, we will never be able to fully grasp these beings that are lost to deep time. The fossils are a meager piece of evidence representing
+            only a fraction of the otherwise forgotten. A shadow left behind. We try to illuminate them by investigating and interpreting their remains.
+            But even with a commitment to an unbiased approach, we cannot help but have our anthropocentric perspective reflected back at us. While the
+            Gabonionta give us clues about the past, they are at the same time a glimpse into the future — our future. What will be left of humankind in
+            another 2 billion years, will we even be remembered?
+            <br>
+            <br>
+            Our installation brings humans and Gabonionta together, enabling interaction and thus reaching beyond the unfathomable space of time.
+            The project creates the basis for a dialogue between the two, giving us the possibility to understand more about them and ultimately
+            about ourselves and our relics. Because in the end, only the shadow will remain.
+            <br>
+            <br>
+        </div>
+        <img src="media/shadow0.jpeg" alt="shadow-project" style="padding: 60px 40px 0;">
+        <img src="media/shadow1.jpg" alt="shadow-project" style="padding: 60px 40px 0;">
+        <img src="media/shadow2.jpeg" alt="shadow-project" style="padding: 60px 40px 0;">
+        <img src="media/shadow3.jpg" alt="shadow-project" style="padding: 60px 40px 0;">
+        <img src="media/shadow4.png" alt="shadow-project" style="padding: 60px 40px 0;">
+        <img src="media/shadow5.jpg" alt="shadow-project" style="padding: 60px 40px 0;">
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer py" style="background-color: transparent; color: #333335;">
+    <div class="container grid">
+        <div>
+            <h1><span style="font-family: monospace;">Mewbrouwer</span>
+            </h1>
+            <p>Copyright &copy; 2022</p>
+        </div>
+        <div>
+            <div class="social" style="font-weight: bold;">
+                <a href="main.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="about-me.html">About Me</a>
+                <a href="https://designinvestigations.at/"><i class="fa fa-university fa-2x"></i></a>
+                <a href="https://www.instagram.com/selma_schautamal/"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://youtu.be/WkyeMZEeerY"><i class="fa fa-solid fa-music fa-2x"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    let toTop = document.getElementById("scrollBackUp");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            toTop.style.display = "block";
+        } else {
+            toTop.style.display = "none";
+        }
+    }
+    function toTheMoon() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="main-style.css">
+    <title>Semmel | Speculative Design</title>
+
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            background: rgb(36,175,160);
+            background: linear-gradient(0deg, rgb(36, 174, 160) 0%, rgba(179,225,208,1) 50%, rgb(251, 251, 253) 100%);
+            min-height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+    <div class="header" style="background-color: transparent;">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="main.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="index-two.html" style="padding: 0; margin: 0 0;"><img src="media/semmel.png" alt="Semmel" class="logo"></a></li>
+                    <li><a href="test.html">Possible Worlds</a></li>
+                    <li><a href="about-me.html">About Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+<!-- It is I -->
+    <section class="leMe" style="background-color: transparent;">
+        <div class="container grid">
+            <div class="text-center">
+                <h2 class="lg" style="color: var(--colorOne); font-weight: bold;">Semmel Mewbrouwer</h2>
+                <p class="font myOne" style="color: var(--colorTwo);">It is I that does the possible world design. Semmel-making is my hobby. Passionate about tootties and fruities. Super fast. Very Non-Violent.</p>
+                <div class="open-read-more">
+                    <a id="read-more-link">Read More</a>
+                    <div id="read-more" class="initially-close-bob">
+                        <span class="funky-text">Bamboozled</span>
+                    </div>
+                </div>
+            </div>
+            <img src="media/semmel.png" alt="">
+        </div>
+    </section>
+
+    <script>
+        let bob_state = false;
+        document.getElementById("read-more-link").addEventListener("click", darthFader);
+        function darthFader() {
+            let bob_content = document.getElementById("read-more")
+            if (bob_state === true) {
+                bob_content.className= "close-bob";
+                bob_state = false;
+            }
+            else if (bob_state === false) {
+                bob_content.className= "open-bob";
+                bob_state = true;
+            }
+        }
+    </script>
+
+    <!-- Stats -->
+    <section class="i-did" style="background-color: transparent;">
+        <div class="container">
+            <h3 class="i-did-heading text-center">
+                 Today is only <span id="today_in_seconds" style="color: blue;"></span> seconds old. Some stuff I did (not):
+                <script>
+                    let secundz = document.getElementById('today_in_seconds');
+                    let nowsers = new Date();
+                    let seconds_pls = nowsers.getHours()*3600 + nowsers.getMinutes()*60 + nowsers.getSeconds();
+                    function countSeconds () {
+                        seconds_pls += 1;
+                        secundz.innerText = seconds_pls;
+                    }
+                    let cancel = setInterval(countSeconds, 1000);
+                </script>
+            </h3>
+
+            <div class="grid grid-3 text-center myThree">
+                <div>
+                    <i class='fas fa-cat fa-3x' style='color: blue'></i>
+                    <h3>11,111,113</h3>
+                    <p class="text-secondary">Cats petted today</p>
+                </div>
+                <div>
+                    <i class='fa fa-bath fa-3x' style='color: blue'></i>
+                    <h3>None</h3>
+                    <p class="text-secondary">Showers taken since christmas</p>
+                </div>
+                <div>
+                    <i class='fas fa-horse fa-3x' style='color: blue'></i>
+                    <h3>1</h3>
+                    <p class="text-secondary">Successful Troy invasions today</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+    <footer class="footer py" style="background-color: transparent; color: #333335;">
+        <div class="container grid">
+            <div>
+                <h1><span style="font-family: monospace;">Mewbrouwer</span>
+                </h1>
+                <p>Copyright &copy; 2022</p>
+            </div>
+            <div>
+                <div class="social" style="font-weight: bold;">
+                    <a href="main.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="about-me.html">About Me</a>
+                    <a href="https://designinvestigations.at/"><i class="fa fa-university fa-2x"></i></a>
+                    <a href="https://www.instagram.com/selma_schautamal/"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="https://youtu.be/WkyeMZEeerY"><i class="fa fa-solid fa-music fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

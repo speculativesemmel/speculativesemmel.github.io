@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(216, 220, 227);
+    height: 100%;
+}
+
+.header {
+    padding: 1.618em;
+    height: 100px;
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    padding-top: 30px;
+}
+#rounded-logo {
+    border-radius: 50%;
+    max-width: 100px;
+    height: auto;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    background-color: #d8dce3;
+    color: #03388f;
+    font-weight: bold;
+    height: 6vh;
+}
+
+nav .links {
+    display: flex;
+    gap: 0 20px;
+}
+
+.links p {
+    padding: 10px;
+}
+
+.tab:hover {
+    color: #008cff;
+}
+
+.tab {
+    cursor: pointer;
+}
+
+#mobile-menu-button {
+    display: none;
+}
+.mobile-menu {
+    color: #d8dce3;
+    display: none;
+    position: absolute;
+    right: 0;
+    height: 40vh;
+    width: 100%;
+    font-weight: bold;
+    background-color: #03388f;
+}
+
+@media (max-width: 634px) {
+    #mobile-menu-button {
+        display: block;
+    }
+    nav p {
+        display: none;
+    }
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .header {
+        float: right;
+    }
+    .logo {
+        display: none;
+    }
+}
+
+#projects {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    display: none;
+}
+
+#otherWork {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    display: none;
+}
+
+#contact {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    display: none;
+}
+
+#about {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    display: none;
+}
+
+
+#waldeinsamkeit {
+    width: 100%;
+    text-align: left;
+}
+
+
+#project-content {
+    cursor: pointer;
+}
+
+#project-content:hover {
+    color: blue;
+    font-size: 150%;
+}
+
+#project-content-2 {
+    cursor: pointer;
+}
+#project-content-2:hover {
+    color: blue;
+    font-size: 150%;
+}
+
+.initially-close-bob {
+    display: none;
+}
+
+.close-bob {
+    animation: fade-out 1s ;
+    -webkit-animation: fade-out 1s ; /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.open-bob{
+    animation: fade-in 2s ;
+    -webkit-animation: fade-in 2s ;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+    from {
+        max-height: 1000px;
+        opacity: 1;
+    }
+    to {
+        display:none;
+        max-height: 0;
+        opacity:0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        display:none;
+        max-height: 0;
+        opacity:0;
+    }
+    to {
+        max-height: 1000px;
+        opacity: 1;
+    }
+}

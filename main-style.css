@@ -86,6 +86,71 @@ img {
 }
 
 /**********************************************************************************************************************/
+/* Burger */
+
+.contain-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101623;
+}
+
+@media(max-width: 768px) {
+    .burger{
+        display: block;
+        margin-top: 50px;
+    }
+    .burger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .burger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navMenu {
+        position: fixed;
+        right: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 200px;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-item {
+        margin: 16px 0;
+    }
+    .navMenu.active {
+        right: 0;
+        z-index: 100;
+        border: 2px solid black;
+        border-right: none;
+        border-radius: 30px 0 0 30px;
+    }
+    .header ul > li {
+        padding-top: 4px;
+        padding-bottom: 8px;
+    }
+}
+
+/**********************************************************************************************************************/
 /* Headline */
 
 .headline {
@@ -119,7 +184,6 @@ img {
     height: 400px;
     width: 400px;
     padding: 10px;
-    z-index: 100;
     justify-self: flex-end;
     animation: slideInFromRight 1s ease-in;
     box-shadow: 0 4px 8px 0 rgb(253, 200, 25);
@@ -442,6 +506,7 @@ img {
         width: 80px;
         justify-self: end;
         top: -24px;
+        display: none;
     }
     .footer {
         margin-top: -60px;
@@ -494,9 +559,6 @@ img {
 @media (max-width: 500px) {
     .headline {
         height: 340px;
-    }
-    .that-me {
-        display: none;
     }
     .headline h1 {
         font-size: 24px;

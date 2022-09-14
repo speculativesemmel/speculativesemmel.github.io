@@ -24,19 +24,39 @@
 <body>
 
 <!-- Header -->
-    <div class="header" style="background-color: transparent;">
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="https://upload.wikimedia.org/wikipedia/commons/d/d0/Kaisersemmel-.jpg" style="padding: 0; margin: 0 0;"><img src="media/semmel.png" alt="Semmel" class="logo"></a></li>
-                    <li><a href="extra.html">Possible Worlds</a></li>
-                    <li><a href="about-me.html">About Me</a></li>
-                </ul>
-            </nav>
-        </div>
+<div class="header" style="background-color: transparent">
+    <div class="container">
+        <nav>
+            <ul class="navMenu">
+                <li class="nav-item"><a href="index.html" class="link">Home</a></li>
+                <li class="nav-item"><a href="projects.html" class="link">Projects</a></li>
+                <li class="nav-item"><a href="https://upload.wikimedia.org/wikipedia/commons/d/d0/Kaisersemmel-.jpg" style="padding: 0; margin: 0 0;" class="link"><img src="media/semmel.png" alt="Semmel" class="logo"></a></li>
+                <li class="nav-item"><a href="extra.html" class="link">Possible Worlds</a></li>
+                <li class="nav-item"><a href="about-me.html" class="link">About Me</a></li>
+            </ul>
+        </nav>
     </div>
+    <div class="burger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</div>
+
+<script>
+    const burger = document.querySelector(".burger");
+    const navMenu = document.querySelector(".navMenu");
+
+    burger.addEventListener("click", () =>
+    {burger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    })
+
+    document.querySelectorAll(".link").forEach(n => n.addEventListener("click", () => {
+        burger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }))
+</script>
 
 <!-- It is I -->
     <section class="leMe" style="background-color: transparent;">

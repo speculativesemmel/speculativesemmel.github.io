@@ -119,7 +119,7 @@ img {
     height: 400px;
     width: 400px;
     padding: 10px;
-    z-index: 1;
+    z-index: 100;
     justify-self: flex-end;
     animation: slideInFromRight 1s ease-in;
     box-shadow: 0 4px 8px 0 rgb(253, 200, 25);
@@ -171,6 +171,10 @@ img {
     font-size: 20px;
 }
 
+.line {
+    border-bottom: 2px solid black;
+}
+
 /**********************************************************************************************************************/
 /* I did today */
 
@@ -207,6 +211,11 @@ img {
     margin: 1rem 0;
 }
 
+.img-current {
+    margin-right: 40px;
+    margin-top: 60px;
+}
+
 /**********************************************************************************************************************/
 /* Le Me */
 
@@ -234,6 +243,10 @@ img {
     padding: 0 140px 40px;
     max-width: 1100px;
     border-bottom: 2px solid blue;
+}
+
+.project-image {
+    padding: 60px 40px 0;
 }
 
 /**********************************************************************************************************************/
@@ -318,72 +331,231 @@ img {
     }
 }
 
-/**********************************************************************************************************************/
-/* Responsive Design */
+.cubus-2 {
+    display:none;
+}
 
-@media (max-width: 768px) {
+.possy-text {
+    display:none;
+}
+
+/**********************************************************************************************************************/
+/* Responsive Design max-1100px */
+
+@media (max-width: 1100px) {
     .grid,
     .headline .grid,
     .i-did .grid,
-    .cli .grid,
     .leMe .grid,
-    .most-recent-project .grid,
-    .features-main .grid,
-    .docs-main .grid {
+    .most-recent-project .grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
-
+    .container {
+        max-height: 294px;
+    }
     .headline {
         height: auto;
     }
-
+    .headline p {
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .headline-text {
         text-align: center;
         margin-top: 40px;
         animation: slideInFromTop 1s ease-in;
     }
-
-    .cli .grid > *:first-child {
-        grid-column: 1;
-        grid-row: 1;
+    .that-me {
+        height: 100px;
+        width: 100px;
+        justify-self: end;
+        top: -64px;
+        background-color: transparent;
+        box-shadow: 1px 2px 4px 0 rgb(253, 200, 25);
     }
-
-    .features-head,
-    .features-sub-head,
-    .docs-head {
-        text-align: center;
+    .intro-text {
+        margin-top: 20px;
     }
+    .text-why-are-you {
+        font-size: 18px;
+    }
+    #just-a-div {
+        margin-top: 40px;
+    }
+    .container-extra {
+        max-height: 1000px;
+    }
+    .img-current {
+        margin-top: 20px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .semmerl {
+        display: none;
+    }
+    .headline-text {
+        margin-bottom: 40px;
+    }
+    .projects {
+        margin-top: -20px;
+        padding: 24px 40px;
+    }
+    .overlay {
+        display: none;
+    }
+    .line {
+        border-bottom: none;
+    }
+    .project-description {
+        padding: 0 40px 40px;
+        font-size: 14px;
+    }
+    #scrollBackUp {
+        visibility: hidden;
+    }
+    .bio-div {
+        min-height: 200px;
+    }
+    .cubus {
+        display: none;
+    }
+    .cubus-2 {
+        display: block;
+    }
+    .possy-text {
+        display: block;
+    }
+}
 
-    .features-head img,
-    .features-sub-head img,
-    .docs-head img {
+
+/* Responsive Design max-768px */
+
+@media (max-width: 768px) {
+    .headline {
+        max-height: 400px;
+    }
+    .that-me {
+        height: 80px;
+        width: 80px;
+        justify-self: end;
+        top: -24px;
+    }
+    .footer {
+        margin-top: -60px;
+    }
+    .footer .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .footer-div {
+        align-self: center;
         justify-self: center;
     }
+    .social {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .text-why-are-you {
+        font-size: 14px;
+        padding: 0;
+    }
+    .most-recent-project p {
+        font-size: 14px;
+    }
+    .headline-text h1 {
+        font-size: 22px;
+    }
+    .bio-div p {
+        font-size: 16px;
+    }
+    .i-did-heading {
+        font-size: 20px;
+    }
+    .i-did .grid h3 {
+        font-size: 24px;
+    }
+    .i-did .grid p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .bio-div {
+        min-height: 210px;
+    }
+    .possy-text {
 
-    .features-main .grid > *:first-child,
-    .features-main .grid > *:nth-child(2) {
-        grid-column: 1;
     }
 }
 
 /* Mobile */
 @media (max-width: 500px) {
-    .header {
-        height: 110px;
+    .headline {
+        height: 340px;
     }
-
-    .header .flex {
-        flex-direction: column;
+    .that-me {
+        display: none;
     }
-
+    .headline h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .intro-text {
+        padding: 0 0;
+        margin-top: 60px;
+    }
+    #just-a-div {
+        margin-top: 10px;
+    }
     .header ul {
         padding: 10px;
-        background-color: rgba(0, 0, 0, 0.1);
     }
-
+    .header .flex {
+        justify-content: center;
+    }
     .showcase-form {
         width: 300px;
+    }
+    .headline p {
+        font-size: 14px;
+    }
+    .headline-text {
+        max-height: 340px;
+        margin-top: 20px;
+    }
+    .project-description {
+        margin-top: 40px;
+        padding: 0 0;
+    }
+    .project-image {
+        padding: 10px 0;
+    }
+    .project-2 {
+        margin-top: -100px;
+    }
+    .lg {
+        font-size: 18px;
+    }
+    .bio-div p {
+        font-size: 14px;
+    }
+    .i-did-heading {
+        font-size: 14px;
+    }
+    .i-did .grid h3 {
+        font-size: 20px;
+    }
+    .i-did .grid p {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .possy-text {
+        font-size: 14px;
+        text-align: center;
     }
 }
 
@@ -722,6 +894,58 @@ img {
         -webkit-transform: rotateX(360deg);
         transform: rotateX(360deg);
     }
+}
+
+.cubus-2 {
+    padding: 200px 0;
+    overflow: hidden;
+    animation: slideInFromRight 1s ease-in;
+    border-bottom: 2px solid black;
+}
+
+.scene-2 {
+    -webkit-perspective: 100px;
+    perspective: 100px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cube-2 {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    -webkit-animation: rotate 10s ease-in-out infinite;
+    animation: rotate 10s ease-in-out infinite;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.side-2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #333;
+    opacity: .75;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.possy-text {
+    padding: 0 40px 30px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    border-bottom: 2px solid black;
 }
 
 /**********************************************************************************************************************/
